@@ -2,7 +2,7 @@ app-id: org.fcitx.Fcitx5.Addon.Hangul
 branch: stable
 runtime: org.fcitx.Fcitx5
 runtime-version: stable
-sdk: org.kde.Sdk//6.8
+sdk: org.kde.Sdk//6.9
 build-extension: true
 separate-locales: false
 build-options:
@@ -18,13 +18,15 @@ modules:
     sources:
       - type: git
         url: https://github.com/libhangul/libhangul
-        tag: libhangul-0.1.0
+        tag: libhangul-0.2.0
         x-checker-data:
           type: anitya
           project-id: 1630
           stable-only: true
           tag-template: libhangul-${version}
-        commit: 9fe2d4e8c225b1797d2c5bb78ccfdc703af7b886
+        commit: 41c702f5d3581325b646ef6249f1f641b0427ae0
+      - type: patch
+        path: libhangul-gettext.patch
     buildsystem: simple
     build-commands:
       - ./autogen.sh
@@ -38,6 +40,6 @@ modules:
     sources:
       - type: git
         url: https://github.com/fcitx/fcitx5-hangul
-        tag: 5.1.6
+        tag: 5.1.7
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
