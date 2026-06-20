@@ -41,7 +41,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/fcitx/fcitx5-hangul
-        tag: 5.1.9
-        commit: b10c457c58d80ecc4e870c02bc8287bbd1305e38
+        tag: 5.1.10
+        commit: 8205b46472bfc6af0603e5ac126394844bf8d8a5
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
