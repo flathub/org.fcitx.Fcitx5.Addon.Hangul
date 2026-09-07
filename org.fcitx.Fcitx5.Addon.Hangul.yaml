@@ -1,7 +1,7 @@
 app-id: org.fcitx.Fcitx5.Addon.Hangul
 runtime: org.fcitx.Fcitx5
 runtime-version: stable
-sdk: org.kde.Sdk//6.10
+sdk: org.kde.Sdk//6.11
 build-extension: true
 separate-locales: false
 build-options:
@@ -41,7 +41,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/fcitx/fcitx5-hangul
-        tag: 5.1.10
-        commit: 8205b46472bfc6af0603e5ac126394844bf8d8a5
+        tag: 5.1.11
+        commit: a9cd9daa71e7a9a36531bcbf73338aaa7227f448
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
